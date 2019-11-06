@@ -148,7 +148,7 @@ def _get_iocage_facts(module, iocage_path, argument="all", name=None):
                 # non-iocage jails: skip all
                 break
             elif re.match('(\d+|-)',_jid):
-                if l.count('\t') == 10:
+                if l.count('\t') == 9:
                     (_jid,_name,_boot,_state,_type,_release,_ip4,_ip6,_template,_basejail) = l.split('\t')
                 else:
                     (_jid,_name,_boot,_state,_type,_release,_ip4,_ip6,_template) = l.split('\t')
